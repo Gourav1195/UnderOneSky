@@ -10,7 +10,7 @@ const SignIn = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try{
-        const response  = await axios.post('http://localhost:5000/api/sign-in', { email,
+        const response  = await axios.post('https://under-one-sky-server.vercel.app/api/sign-in', { email,
         password});
         setUser(response.data.user);
         console.log(response.data.user);
