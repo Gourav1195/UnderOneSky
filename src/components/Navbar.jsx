@@ -24,8 +24,8 @@ export const Navbar = () => {
    
       <div>
         <Link to="/">Home</Link>
-        <Link to="/blog">Blog</Link>
-        <Link to="/timer">Timer</Link>
+        {/* <Link to="/blog">Blog</Link> */}
+        <Link to="/shop">Shop</Link>
         
         <Link to="/leaderboard">Leaderboard</Link>
         <Link to="/reminder">Reminder</Link>

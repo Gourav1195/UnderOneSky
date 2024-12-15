@@ -11,12 +11,14 @@ const SignIn = () => {
     e.preventDefault();
     try{
         const response  = await axios.post('https://under-one-sky-server.vercel.app/api/sign-in', { email,
+        // const response  = await axios.post('http://localhost:5000/api/sign-in', { email,
         password});
         setUser(response.data.user);
-        console.log(response.data.user);
+        console.log(response.data.user.name);
         localStorage.setItem('token', response.data.token);
         localStorage.setItem('user', JSON.stringify(response.data.user.name));
-        console.log("Signed in successfully", user.name);
+        console.log("Signed in successfully", 'user:', user);
+        console.log("user.email", user.id);
         // const local = localStorage.getItem('user');
         // const user2 = JSON.parse(local);
         
@@ -27,6 +29,8 @@ const SignIn = () => {
   };
 
   return (
+    <>
+    
     <form onSubmit={handleSubmit}>
       <h2>Signed In </h2>
       <input
@@ -43,6 +47,7 @@ const SignIn = () => {
        />
        <button type='submit'>Sign In</button>
     </form>
+    </>
   )
 }
 
