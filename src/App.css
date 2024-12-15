@@ -37,6 +37,7 @@ h1 {
   height: 92vh;
 }
 
+/* Navbar */
 .navbar {
   height: 8vh;
   display: flex;
@@ -101,6 +102,8 @@ h1 {
   content: "🌙";
   background-color: grey;
 }
+
+/* Banner Image */
 .banner_image {
   padding: 0;
   min-width: 100%;
@@ -168,4 +171,50 @@ h1 {
     float: left;
     width: 50%;
   }
+}
+
+/* leaderboard */
+.leaderboard-post {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.leaderboard-rank {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  width: 50px;
+  text-align: center;
+}
+
+.leaderboard-profile {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.profile-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.username {
+  font-size: 16px;
+  font-weight: bold;
+  color: #555;
+}
+
+.leaderboard-score {
+  font-size: 18px;
+  font-weight: bold;
+  color: #007bff;
 }
