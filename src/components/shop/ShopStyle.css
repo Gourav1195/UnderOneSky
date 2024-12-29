@@ -51,6 +51,7 @@
     position: relative;
     box-shadow: 0 0 5px rgba(75, 75, 75, 0.07);
     z-index: 1;
+    background-color:var(--bg2-color);
   }
   
   .card-body {
@@ -88,7 +89,6 @@
     line-height: 60px;
     margin: 10px 0;
     text-transform: capitalize;
-    color:rgba(0, 0, 0, 1)
   }
   
   .card-description {

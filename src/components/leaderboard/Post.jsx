@@ -1,4 +1,5 @@
 import React from "react";
+import "./Post.css"; // Include styling for the leaderboard
 
 const Post = ({ rank, username, score, profilePic }) => {
   return (

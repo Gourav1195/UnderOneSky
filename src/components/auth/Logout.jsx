@@ -1,13 +1,11 @@
 import React from 'react'
 
-const Logout = () => {
-    const handleLogout = () =>{
+    const HandleLogout = () =>{
+      
       localStorage.removeItem('user');
-      // setStoredUser(null);
+      localStorage.removeItem('token');
+      // setUser(null);
+      window.location.reload();
+      alert('logged out successfully');
     }
-return (<form onSubmit={handleLogout}>
-      <button type='submit'>Logout</button>
-    </form>
-  )
-}
-export default Logout
+export default HandleLogout

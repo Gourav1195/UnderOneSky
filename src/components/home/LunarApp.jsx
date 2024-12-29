@@ -9,7 +9,9 @@ const LunarApp = () => {
         const API_KEY = process.env.REACT_APP_LUNAR_API_KEY;
         
         try{
-            const {latitude, longitude} = await getCurrentPosition();
+            // const {latitude, longitude} = await getCurrentPosition();
+            const latitude = '28.7041';
+            const longitude = '77.1025';
             const url = `https://api.ipgeolocation.io/astronomy?apiKey=${API_KEY}&lat=${latitude}&long=${longitude}`;
             const response = await fetch(url);
             const data = await response.json();

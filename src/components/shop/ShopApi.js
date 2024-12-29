@@ -3,7 +3,7 @@
     
     {
         id: 6,
-        image: "https://source.unsplash.com/weekly?pavbhaji",
+        image: "https://api.pexels.com/v1/search?query=telescope",
         name: "Sky Master",
         category: "Binoculars",
         price: '₹3,925',
@@ -11,7 +11,7 @@
     },
     {
         id: 7,
-        image: "https://source.unsplash.com/weekly?paratha",
+        image: "https://www.pexels.com/photo/black-telescope-under-blue-and-blacksky-2034892/",
         name: "Canon",
         category: "Glasses",
         price: '₹5,525',

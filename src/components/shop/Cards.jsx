@@ -7,12 +7,12 @@ const ShopCard = ({ ShopData }) => {
     <>
       <section className="main-card--cointainer">
         {ShopData.map((curElem) => {
-          const { id, name, category, image, description } = curElem;
+          const { id, name, category, image, description, price } = curElem;
 
           return (
             <>
               <div className="card-container" key={id}>
-                <div className="card ">
+                <div className="card darkmode-bg">
                   <div className="card-body">
                     <span className="card-number card-circle subtle">{id}</span>
                     <span className="card-author subtle"> {category}</span>
@@ -21,7 +21,9 @@ const ShopCard = ({ ShopData }) => {
                       {description}
                     </span>
                     <div className="card-read">Read</div>
+                    <p>{price}</p>
                   </div>
+                  
                   <img src={image} alt="images" className="card-media" />
 
                   <span className="card-tag  subtle">Order Now</span>

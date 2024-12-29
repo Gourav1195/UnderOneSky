@@ -69,18 +69,18 @@ const WeatherApp = () => {
       </div> 
         { weather ? (
           <>
-            <div className='container'>
+            <div  className='container'>
           
                 <h4>{weather.name}</h4>
                 <p>{weather?.weather[0]?.description}</p>
                 <p>{weather?.main?.temp}</p>
                 
             </div>
-            <div>
-            <p>Visibility: {weather.visibility} meters ({categorizedVisibility(weather.visibility)})
+            <div  >
+            <p  className='container'>Visibility: {weather.visibility} meters ({categorizedVisibility(weather.visibility)})
             </p>
-            <p>Sunrise: {convertUnixToTime(weather.sys.sunrise)}</p>
-            <p>Sunset: {convertUnixToTime(weather.sys.sunset)}</p>
+            <p  className='container'>Sunrise: {convertUnixToTime(weather.sys.sunrise)}</p>
+            <p  className='container'>Sunset: {convertUnixToTime(weather.sys.sunset)}</p>
             </div>
             
             </>

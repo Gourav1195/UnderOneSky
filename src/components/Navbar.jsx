@@ -3,35 +3,42 @@ import { Link } from "react-router-dom";
 import { useTheme } from "./theme";
 import { useEffect, useState } from "react";
 import Logout from "./auth/Logout";
+import AuthModal from "./auth/AuthModal";
+
 export const Navbar = () => {
   const { theme, toggleTheme } = useTheme();
-  const [storedUser, setStoredUser] = useState(null);
-  // console.log(theme);
-  useEffect(() => {
-        const user = localStorage.getItem('user');
-      if(user) {
-        try {
-          setStoredUser(JSON.parse(user));
-          console.log("user from localstorage: ", JSON.parse(user));
+  const [user, setUser] = useState(null);
+
+  const handleLogout = () =>{
       
-        } catch (error) {
-          console.log('failed to get user from localstorage error', error)
-        }
-      }
-  },[]);
+    localStorage.removeItem('user');
+    localStorage.removeItem('token');
+    // setUser(null);
+    window.location.reload();
+    alert('logged out successfully');
+  }
+
+  useEffect(() => {
+    const storedUser = localStorage.getItem('user');
+    let name = JSON.parse(storedUser);
+    if (storedUser) {
+      setUser(name); 
+    }
+  }, []);
+
   return (
     <nav className={`navbar ${theme}`}>
    
       <div>
-        <Link to="/">Home</Link>
+        <Link className="nav-button" to="/">Home</Link>
         {/* <Link to="/blog">Blog</Link> */}
-        <Link to="/shop">Shop</Link>
+        <Link className="nav-button" to="/shop">Shop</Link>
         
-        <Link to="/leaderboard">Leaderboard</Link>
-        <Link to="/reminder">Reminder</Link>
+        <Link className="nav-button" to="/leaderboard">Leaderboard</Link>
+        {/* <Link to="/reminder">Reminder</Link> */}
 
-        {storedUser ? (<Link to="/logout">Logout </Link>) : 
-        (<Link to="/login">Login</Link>)}
+        {user ? (<button className='auth-button' onClick={() =>{handleLogout()}}>{user? user : 'logout'} </button>) : 
+        (<AuthModal />)}
         
       </div>
       <div className="mode-switch">

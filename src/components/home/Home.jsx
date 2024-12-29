@@ -1,6 +1,6 @@
 import LunarApp from "./LunarApp"
 import WeatherApp from "./WeatherApp"
-
+import "./home.css"
 import { useTheme } from "../theme"
 
 const Home = () => {
@@ -15,7 +15,7 @@ const Home = () => {
                 <h2 class="top-title">Under One Sky
 
                 </h2>
-                <h2 class="white second-title">"lorem ipsum "</h2>
+                <h2 class="em_hide second-title">"The stars are the milestones of the universe, guiding us through its infinite mysteries"</h2>
                 
             </div>
         </div>
