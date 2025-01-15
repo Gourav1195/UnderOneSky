@@ -136,7 +136,7 @@ h1 {
 }
 
 .nav-button:hover {
-  color: rgb(158, 158, 158);   /* Change color when hovered */
-  text-decoration: none;  /* Remove underline on hover */
+  color: rgb(158, 158, 158); 
+  text-decoration: none;
 }
 
