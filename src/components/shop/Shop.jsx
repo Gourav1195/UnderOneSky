@@ -16,8 +16,8 @@ console.log(uniqueList);
 
 const Shop = () => {
     const [ShopData, setShopData] = useState(Item);
-    const [menuList, setMenuList] = useState(uniqueList);
-
+    // const [menuList, setMenuList] = useState(uniqueList);
+    const menuList = uniqueList; 
     const filterItem = (category) => {
     if(category === 'All'){ 
         setShopData(Item);
