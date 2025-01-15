@@ -1,11 +1,11 @@
-import React from 'react'
+// import React from 'react'
 
-    const HandleLogout = () =>{
+//     const HandleLogout = () =>{
       
-      localStorage.removeItem('user');
-      localStorage.removeItem('token');
-      // setUser(null);
-      window.location.reload();
-      alert('logged out successfully');
-    }
-export default HandleLogout
+//       localStorage.removeItem('user');
+//       localStorage.removeItem('token');
+//       // setUser(null);
+//       window.location.reload();
+//       alert('logged out successfully');
+//     }
+// export default HandleLogout
