@@ -1,4 +1,3 @@
-// src/components/Leaderboard.js
 import React, { useEffect, useState } from 'react';
 import './Leaderboard.css';
 
