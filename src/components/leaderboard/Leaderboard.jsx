@@ -1,41 +1,54 @@
-import React from "react";
-import Post from "./Post.jsx";
+// src/components/Leaderboard.js
+import React, { useEffect, useState } from 'react';
+import './Leaderboard.css';
 
-const App = () => {
-  const posts = [
-    {
-      username: "John Doe",
-      profilePic: "https://i.pravatar.cc/50?u=Charlie",
-      postImage: "https://via.placeholder.com/300",
-      description: "Exploring the mountains!",
-      likes: 120,
-      comments: 45,
-    },
-    {
-      username: "Jane Smith",
-      profilePic: "https://i.pravatar.cc/50?u=Bob",
-      postImage: "https://i.pravatar.cc/50?u=Alice",
-      description: "Lovely day at the beach 🌊",
-      likes: 90,
-      comments: 30,
-    },
-  ];
+const Leaderboard = () => {
+  const [players, setPlayers] = useState([]);
+
+  // Fetch leaderboard data from the API
+  useEffect(() => {
+    const fetchLeaderboard = async () => {
+      try {
+        const response = await fetch('http://localhost:5000/api/leaderboard');
+        const data = await response.json();
+        setPlayers(data);
+      } catch (error) {
+        console.error('Failed to fetch leaderboard:', error);
+      }
+    };
+
+    fetchLeaderboard();
+  }, []);
 
   return (
-    <div>
-      {posts.map((post, index) => (
-        <Post
-          key={index}
-          username={post.username}
-          profilePic={post.profilePic}
-          postImage={post.postImage}
-          description={post.description}
-          likes={post.likes}
-          comments={post.comments}
-        />
-      ))}
+    <div className="leaderboard-container">
+      <h1 className="leaderboard-title">Leaderboard</h1>
+      <table className="leaderboard-table">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Name</th>
+            <th>Score</th>
+            <th>Matches</th>
+            <th>Winrate</th>
+            <th>Region</th>
+          </tr>
+        </thead>
+        <tbody>
+          {players.map((player, index) => (
+            <tr key={player._id} className={`rank-${index + 1}`}>
+              <td>{index + 1}</td>
+              <td>{player.name}</td>
+              <td>{player.score.toLocaleString()}</td>
+              <td>{player.matches.toLocaleString()}</td>
+              <td>{player.winrate.toFixed(2)}%</td>
+              <td>{player.region}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };
 
-export default App;
+export default Leaderboard;

@@ -17,8 +17,8 @@ const AuthModal = () => {
   const handleSubmit = async(e) => {
     e.preventDefault();
     try{
-      // const response  = await axios.post('https://under-one-sky-server.vercel.app/api/sign-in', { email,
-      const response  = await axios.post('http://localhost:5000/api/sign-in', { email,
+      const response  = await axios.post('https://under-one-sky-server.vercel.app/api/sign-in', { email,
+      // const response  = await axios.post('http://localhost:5000/api/sign-in', { email,
       password});
       console.log(response);  // Log the response to check if it's correct
       console.log(response.data.user.email);
@@ -50,8 +50,8 @@ const AuthModal = () => {
     e.preventDefault();
     
     try {
-      // const response = await axios.post('https://under-one-sky-server.vercel.app/api/sign-up', { email, password, name });
-      const response = await axios.post('http://localhost:5000/api/sign-up', { email, password, name });
+      const response = await axios.post('https://under-one-sky-server.vercel.app/api/sign-up', { email, password, name });
+      // const response = await axios.post('http://localhost:5000/api/sign-up', { email, password, name });
       setUser(response.data.user.email);
       localStorage.setItem('user', JSON.stringify(response.data.user.email));
       localStorage.setItem('token', response.data.token);
@@ -90,8 +90,8 @@ const AuthModal = () => {
             >
               &times;
             </button>
-            <h2>{isSigningIn ? 'Sign In' : 'Sign Up'}</h2>
-            <form onSubmit={isSigningIn ? handleSubmit : handleSignupSubmit}>
+            <h2 className='child' >{isSigningIn ? 'Sign In' : 'Sign Up'}</h2>
+            <form className='child' onSubmit={isSigningIn ? handleSubmit : handleSignupSubmit}>
               {!isSigningIn && (
                 <input
                   type="text"
@@ -114,7 +114,7 @@ const AuthModal = () => {
               />
               <button type="submit">{isSigningIn ? 'Sign In' : 'Sign Up'}</button>
             </form>
-            <p>
+            <p className='child' >
               {isSigningIn ? (
                 <>
                   Don't have an account?{' '}

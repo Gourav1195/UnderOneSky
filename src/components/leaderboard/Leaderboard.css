@@ -1,0 +1,98 @@
+// src/components/Leaderboard.css
+
+/* Container Styles */
+.leaderboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #2b2b2b, #1a1a1a);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+
+/* Title Styles */
+.leaderboard-title {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ffd700;
+}
+
+/* Table Styles */
+.leaderboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #1e1e1e;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.leaderboard-table th, .leaderboard-table td {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.leaderboard-table thead th {
+  background-color: #3a3a3a;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.leaderboard-table tbody tr {
+  border-bottom: 1px solid #3a3a3a;
+}
+
+.leaderboard-table tbody tr:nth-child(even) {
+  background-color: #2b2b2b;
+}
+
+.leaderboard-table tbody tr:hover {
+  background-color: #414141;
+}
+
+.leaderboard-table tbody td {
+  color: #ddd;
+  font-size: 16px;
+}
+
+/* Rank Styles */
+.rank-1 td {
+  background: linear-gradient(90deg, #ffb347, #ffcc33);
+  color: #000;
+  font-weight: bold;
+}
+
+.rank-2 td {
+  background: linear-gradient(90deg, #c0c0c0, #d9d9d9);
+  color: #000;
+  font-weight: bold;
+}
+
+.rank-3 td {
+  background: linear-gradient(90deg, #cd7f32, #d8a15f);
+  color: #000;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .leaderboard-table th, .leaderboard-table td {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .leaderboard-title {
+    font-size: 28px;
+  }
+
+  .leaderboard-table th, .leaderboard-table td {
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+}
