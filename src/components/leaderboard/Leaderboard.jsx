@@ -28,7 +28,7 @@ const Leaderboard = () => {
             <th>Rank</th>
             <th>Name</th>
             <th>Score</th>
-            <th>Matches</th>
+            {/* <th>Matches</th> */}
             <th>Winrate</th>
             <th>Region</th> 
           </tr>
@@ -39,7 +39,7 @@ const Leaderboard = () => {
               <td>{index + 1}</td>
               <td>{player.name}</td>
               <td>{player.score.toLocaleString()}</td>
-              <td>{player.matches.toLocaleString()}</td>
+              {/* <td>{player.matches.toLocaleString()}</td> */}
               <td>{player.winrate.toFixed(2)}%</td>
               <td>{player.region}</td>
             </tr>

@@ -1,15 +1,23 @@
 
 [data-theme="light"] {
-  --bg-color: #ffffff;
+  /* --bg-color: #ffffff; */
   --text-color: #333333;
   --heading-color: #444444;
+  background: linear-gradient(90deg, white,rgb(154, 184, 249), rgb(30, 20, 200));
+  .bg2{
+    background: linear-gradient(90deg, white, rgb(94, 94, 252));
+   }
 }
 
 [data-theme="dark"] {
   --bg-color: #282828;
   --text-color: #ffffff;
   --heading-color: #dddddd;
- --bg2-color: rgb(62, 61, 61);
+ /* --bg2-color: rgb(61, 61, 61); */
+ background: linear-gradient(90deg, black,rgb(1, 1, 71));
+ .bg2{
+  background: linear-gradient(90deg, rgb(6, 0, 58), rgb(1, 1, 122));
+ }
 }
 
 @keyframes slide-background {
@@ -41,11 +49,16 @@
 
 
 body {
-  background-color: var(--bg-color);
+  /* background-color: var(--bg-color); */
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
   color: var(--text-color);
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0 5px;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 h1 {

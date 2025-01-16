@@ -30,12 +30,13 @@ export const Navbar = () => {
     <nav className={`navbar ${theme}`}>
    
       <div>
+      &nbsp;
         <Link className="nav-button" to="/">Home</Link>
         {/* <Link to="/blog">Blog</Link> */}
         <Link className="nav-button" to="/shop">Shop</Link>
         
         <Link className="nav-button" to="/leaderboard">Leaderboard</Link>
-        {/* <Link to="/reminder">Reminder</Link> */}
+        <Link to="/ai">AI Chatbot</Link>
 
         {user ? (<button className='auth-button' onClick={() =>{handleLogout()}}>{user? user : 'logout'} </button>) : 
         (<AuthModal />)}
@@ -50,6 +51,7 @@ export const Navbar = () => {
           />
           <span className="slider round"> </span>
         </label>
+        &nbsp;
       </div>
     </nav>
   );

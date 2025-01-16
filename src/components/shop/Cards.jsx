@@ -12,7 +12,7 @@ const ShopCard = ({ ShopData }) => {
           return (
             <>
               <div className="card-container" key={id}>
-                <div className="card darkmode-bg">
+                <div className="card bg2">
                   <div className="card-body">
                     <span className="card-number card-circle subtle">{id}</span>
                     <span className="card-author subtle"> {category}</span>

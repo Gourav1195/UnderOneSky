@@ -7,7 +7,7 @@ const Home = () => {
     const {theme} = useTheme;
   return (
 
-    <div className={`page${theme}`}>
+    <div className={`page${theme} wrapper`}>
             {/* <img className="banner_image" src="/banner.jpg" alt="night sky"  /> */}
       <div id="top" class="banner_image bg">
         <div class="follow_container">
