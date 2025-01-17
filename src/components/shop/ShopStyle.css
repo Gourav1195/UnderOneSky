@@ -177,7 +177,7 @@
     border: none;
     /* min-width: 6rem; */
     padding: 1.5rem 3rem;
-    background-color: rgb(255, 255, 255);
+    background-color: var();
     cursor: pointer;
     margin: 0;
     font-size: 17px;

@@ -8,6 +8,7 @@ import AuthModal from "./auth/AuthModal";
 export const Navbar = () => {
   const { theme, toggleTheme } = useTheme();
   const [user, setUser] = useState(null);
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleLogout = () =>{
       
@@ -27,21 +28,26 @@ export const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`navbar ${theme}`}>
-   
-      <div>
-      &nbsp;
-        <Link className="nav-button" to="/">Home</Link>
-        {/* <Link to="/blog">Blog</Link> */}
-        <Link className="nav-button" to="/shop">Shop</Link>
-        
-        <Link className="nav-button" to="/leaderboard">Leaderboard</Link>
-        <Link to="/ai">AI Chatbot</Link>
+    <>
+    
 
-        {user ? (<button className='auth-button' onClick={() =>{handleLogout()}}>{user? user : 'logout'} </button>) : 
-        (<AuthModal />)}
+      <nav className="{`navbar ${theme}`} p-4 shadow-md">
+      <div className="container mx-auto flex justify-between items-center">
         
-      </div>
+        {/* Logo */}
+        <a href="/" className=" text-2xl font-bold">
+          UnderOneSky
+        </a>
+
+        {/* Desktop Menu */}
+        <ul className="hidden md:flex space-x-6">
+          {/* <li><Link to="/" className="text-white hover:text-gray-200">Home</Link></li> */}
+          <li><Link to="/shop" className=" hover:text-gray-200">Shop</Link></li>
+          <li><Link to="/leaderboard" className=" hover:text-gray-200">Leaderboard</Link></li>
+          <li><Link to="/ai" className="hover:text-gray-200">AI Chatbot</Link></li>
+          <li> {user ? (<button className='auth-button' onClick={() =>{handleLogout()}}>{user? user : 'logout'} </button>) : 
+        (<AuthModal />)}</li>
+      </ul>
       <div className="mode-switch">
         <label>
           <input
@@ -53,7 +59,30 @@ export const Navbar = () => {
         </label>
         &nbsp;
       </div>
+
+        {/* Mobile Menu Button */}
+        <button
+          className="md:hidden text-white focus:outline-none my-1 nav-button"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          {isOpen ? "✖" : "☰"}
+        </button>
+      </div>
+      
+      {/* Mobile Menu */}
+      {isOpen && (
+        <ul className="{`navbar ${theme}`} up md:hidden flex flex-col items-center py-4 space-y-4">
+          <li><Link to="/" className="hover:text-gray-200">Home</Link></li>
+          <li><Link to="/shop" className="hover:text-gray-200">Shop</Link></li>
+          <li><Link to="/leaderboard" className="hover:text-gray-200">Leaderboard</Link></li>
+          <li><Link to="/ai" className="hover:text-gray-200">AI Chatbot</Link></li>
+          <li> {user ? (<button className='auth-button' onClick={() =>{handleLogout()}}>{user? user : 'logout'} </button>) : 
+        (<AuthModal />)}</li>
+      </ul>
+      
+      )}
     </nav>
+</>
   );
 };
 
