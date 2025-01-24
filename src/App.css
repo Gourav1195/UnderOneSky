@@ -5,7 +5,7 @@
   --heading-color: #444444;
   background: linear-gradient(90deg, white,rgb(154, 184, 249), rgb(30, 20, 200));
   .bg2{
-    background: linear-gradient(90deg, white, rgb(94, 94, 252));
+    background: linear-gradient(90deg, rgb(221, 220, 248), rgb(184, 198, 251));
    }
 }
 
@@ -16,7 +16,8 @@
  /* --bg2-color: rgb(61, 61, 61); */
  background: linear-gradient(90deg, black,rgb(1, 1, 71));
  .bg2{
-  background: linear-gradient(90deg, rgb(6, 0, 58), rgb(1, 1, 122));
+  background: linear-gradient(90deg, rgba(10, 10, 10, 1), rgb(10, 10, 10, 0.5));
+  box-shadow: 10px 10px 10px #00003d;
  }
 }
 

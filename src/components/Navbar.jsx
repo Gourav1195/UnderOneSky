@@ -35,9 +35,9 @@ export const Navbar = () => {
       <div className="container mx-auto flex justify-between items-center">
         
         {/* Logo */}
-        <a href="/" className=" text-2xl font-bold">
+        <Link to="/" className=" text-2xl font-bold">
           UnderOneSky
-        </a>
+        </Link>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-6">
@@ -51,6 +51,7 @@ export const Navbar = () => {
       <div className="mode-switch">
         <label>
           <input
+          className="ml-1"
             type="checkbox"
             onChange={toggleTheme}
             checked={theme === "dark"}
@@ -71,7 +72,7 @@ export const Navbar = () => {
       
       {/* Mobile Menu */}
       {isOpen && (
-        <ul className="{`navbar ${theme}`} up md:hidden flex flex-col items-center py-4 space-y-4">
+        <ul className="up {`navbar ${theme}`} md:hidden flex flex-col items-center py-4 space-y-4">
           <li><Link to="/" className="hover:text-gray-200">Home</Link></li>
           <li><Link to="/shop" className="hover:text-gray-200">Shop</Link></li>
           <li><Link to="/leaderboard" className="hover:text-gray-200">Leaderboard</Link></li>

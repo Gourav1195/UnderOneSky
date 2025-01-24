@@ -60,6 +60,7 @@ const WeatherApp = () => {
       <div className='container'>
           <h3 className="heading">Weather Forcast</h3>
           <input  
+            className='px-1  border-2 rounded-md text-gray-900 border-blue-600'
             type='text'
             placeholder=' Enter City'
             value={city}

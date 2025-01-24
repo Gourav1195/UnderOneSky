@@ -15,7 +15,7 @@ export default function getCurrentPosition() {
             },
             (error)=>{
                 console.error('Error while getting location', error.message);
-                reject(new Error (`Error while getting location: ${error.message}`))
+                // reject(new Error (`Error while getting location: ${error.message}`))
             }
         );
     });

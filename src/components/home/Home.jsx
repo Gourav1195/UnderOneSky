@@ -7,7 +7,7 @@ const Home = () => {
     const {theme} = useTheme;
   return (
 
-    <div className={`page${theme} wrapper`}>
+    <div className={`page${theme}`}>
             {/* <img className="banner_image" src="/banner.jpg" alt="night sky"  /> */}
       <div id="top" class="banner_image bg">
         <div class="follow_container">
@@ -15,16 +15,18 @@ const Home = () => {
                 <h2 class="top-title">Under One Sky
 
                 </h2>
-                <h2 class="em_hide second-title">"The stars are the milestones of the universe, guiding us through its infinite mysteries"</h2>
+                <h2 class="second-title em_hide">"The stars are the milestones of the universe, guiding us through its infinite mysteries"</h2>
                 
             </div>
         </div>
       </div>
       
-<div>
-        <WeatherApp />
-        <LunarApp /></div>
+      <div className="home-container">
+          <WeatherApp />
+          <LunarApp />
+      </div>
     </div>
+   
   )
 }
 
