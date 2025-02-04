@@ -35,7 +35,7 @@ export const Navbar = () => {
       <div className="container mx-auto flex justify-between items-center">
         
         {/* Logo */}
-        <Link to="/" className=" text-2xl font-bold">
+        <Link to="/" className="font-comic-sans text-2xl font-bold">
           UnderOneSky
         </Link>
 
@@ -72,7 +72,7 @@ export const Navbar = () => {
       
       {/* Mobile Menu */}
       {isOpen && (
-        <ul className="up {`navbar ${theme}`} md:hidden flex flex-col items-center py-4 space-y-4">
+        <ul className="z-10 {`navbar ${theme}`} md:hidden flex flex-col items-center py-4 space-y-4">
           <li><Link to="/" className="hover:text-gray-200">Home</Link></li>
           <li><Link to="/shop" className="hover:text-gray-200">Shop</Link></li>
           <li><Link to="/leaderboard" className="hover:text-gray-200">Leaderboard</Link></li>

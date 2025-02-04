@@ -7,6 +7,8 @@ import Leaderboard from './components/leaderboard/Leaderboard.jsx'
 import Shop from './components/shop/Shop.jsx';
 import AuthModal from './components/auth/AuthModal.jsx'
 import Chat from './components/chatbot/Chatbot.jsx';
+import Test from './components/test.jsx';
+import Footer from './components/Footer';
 
 export default function App() {
   return (
@@ -19,8 +21,10 @@ export default function App() {
           <Route path="/shop" element={<Shop/>} />
           <Route path="/auth" element={<AuthModal/>} />
           <Route path="/ai" element={<Chat/>} />
+          <Route path="/test" element={<Test/>} />
           
         </Routes>
+        <Footer />
       </BrowserRouter>
     </ThemeProvider>
   );

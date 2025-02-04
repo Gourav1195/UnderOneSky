@@ -2,7 +2,15 @@
 export default {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        // sans: ["Poppins", "sans-serif"],
+        'comic-sans': ['Comic Sans MS', 'cursive'],
+        'museo-sans': ['Museo Sans', 'sans-serif'],
+        'times-new-roman': ['Times New Roman', 'serif'],
+      },
+    },
   },
+  variants: {},
   plugins: [],
 };

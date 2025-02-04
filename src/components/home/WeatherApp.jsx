@@ -12,6 +12,8 @@ const WeatherApp = () => {
       let VisibilityCondition = visibility > 10000 ? 'Exellent Visibility' : visibility > 6000 ? 'Good Visibility' : visibility > 3000 ? 'Moderate Visibility' : visibility > 1000 ? 'Poor Visibility' :'Very Poor Visibility';
       return VisibilityCondition;
     }
+    const iconCode = weather?.weather[0]?.icon
+    const iconUrl = weather ? `http://openweathermap.org/img/wn/${iconCode}@4x.png` : null;
     
     const convertUnixToTime = (unixTime) => {
       const date = new Date(unixTime * 1000);
@@ -57,10 +59,10 @@ const WeatherApp = () => {
 
   return (
     <>
-      <div className='container'>
-          <h3 className="heading">Weather Forcast</h3>
+      <div className='text-center mt-4 '>
+          {/* <h3 className="heading">Weather Forcast</h3> */}
           <input  
-            className='px-1  border-2 rounded-md text-gray-900 border-blue-600'
+            className='px-1  border-2 rounded-md text-gray-900 border-blue-600 text-center'
             type='text'
             placeholder=' Enter City'
             value={city}
@@ -70,20 +72,24 @@ const WeatherApp = () => {
       </div> 
         { weather ? (
           <>
-            <div  className='container'>
-          
-                <h4>{weather.name}</h4>
-                <p>{weather?.weather[0]?.description}</p>
-                <p>{weather?.main?.temp}</p>
+          <div className='flex lg:flex-row flex-col items-center justify-center  '>
+            <div  className='lg:w-auto '>
                 
-            </div>
-            <div  >
-            <p  className='container'>Visibility: {weather.visibility} meters ({categorizedVisibility(weather.visibility)})
-            </p>
-            <p  className='container'>Sunrise: {convertUnixToTime(weather.sys.sunrise)}</p>
-            <p  className='container'>Sunset: {convertUnixToTime(weather.sys.sunset)}</p>
-            </div>
-            
+              {/* <div className='flex items-center gap-2'> */}
+              <h4>{weather.name}</h4>
+              <p>{weather?.weather[0]?.description}</p>
+              {/* <img src={iconUrl} /> */}
+              <p>{weather?.main?.temp}°</p>
+              {/* <p>{weather?.main?.humidity}</p> */}
+              <p  className=''>Visibility: {weather.visibility} meters ({categorizedVisibility(weather.visibility)})</p>            
+              <p  className=''>Sunrise: {convertUnixToTime(weather.sys.sunrise)}</p>
+              <p  className=''>Sunset: {convertUnixToTime(weather.sys.sunset)}</p>
+            </div>   
+
+            <div className='lg:w-auto '>
+              <img src={iconUrl} />
+            </div>         
+          </div>
             </>
             ):(
               <p>Loading...</p>
