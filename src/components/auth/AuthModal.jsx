@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import './Log.css'
+
 
 const AuthModal = () => {
   // const [isLogin, setIsLogin] = useState(true); // Toggle between login and signup
@@ -72,32 +72,46 @@ const AuthModal = () => {
       alert('Sign-Up failed');
     }
   };
-
   return (
     <>
       {/* Auth Button */}
-      <button onClick={() => setIsModalOpen(true)} className="auth-button">
+      <button
+        onClick={() => setIsModalOpen(true)}
+        className="hover:text-gray-200"
+      >
         {isSigningIn ? 'Sign In' : 'Sign Up'}
       </button>
-
+  
       {/* Modal */}
       {isModalOpen && (
-        <div className="modal-backdrop">
-          <div className="modal">
+        <div
+          className="fixed inset-0 bg-gray-500 bg-opacity-50 flex items-center justify-center"
+          onClick={() => setIsModalOpen(false)}
+        >
+          <div
+            className="bg-white rounded-lg w-96 p-6 relative"
+            onClick={(e) => e.stopPropagation()} // Prevent closing on modal click
+          >
             <button
-              className="modal-close"
+              className="absolute top-2 right-2 text-2xl text-gray-500 hover:text-gray-700"
               onClick={() => setIsModalOpen(false)}
             >
               &times;
             </button>
-            <h2 className='child' >{isSigningIn ? 'Sign In' : 'Sign Up'}</h2>
-            <form className='child' onSubmit={isSigningIn ? handleSubmit : handleSignupSubmit}>
+            <h2 className="text-xl font-semibold text-center mb-4">
+              {isSigningIn ? 'Sign In' : 'Sign Up'}
+            </h2>
+            <form
+              className="space-y-4"
+              onSubmit={isSigningIn ? handleSubmit : handleSignupSubmit}
+            >
               {!isSigningIn && (
                 <input
                   type="text"
                   placeholder="Name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               )}
               <input
@@ -105,24 +119,31 @@ const AuthModal = () => {
                 placeholder="Email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+                className="w-5/6 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
               <input
                 type="password"
                 placeholder="Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
+                className="w-5/6 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
-              <button type="submit">{isSigningIn ? 'Sign In' : 'Sign Up'}</button>
+              <button
+                type="submit"
+                className="w-[93%] py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
+              >
+                {isSigningIn ? 'Sign In' : 'Sign Up'}
+              </button>
             </form>
-            <p className='child' >
+            <p className="text-center mt-4">
               {isSigningIn ? (
                 <>
                   Don't have an account?{' '}
                   <span
                     onClick={() => setIsSigningIn(false)}
-                    style={{ cursor: 'pointer', color: '#007bff' }}
+                    className="text-blue-500 hover:underline cursor-pointer"
                   >
-                    Sign&nbsp;Up
+                    Sign Up
                   </span>
                 </>
               ) : (
@@ -130,9 +151,9 @@ const AuthModal = () => {
                   Already have an account?{' '}
                   <span
                     onClick={() => setIsSigningIn(true)}
-                    style={{ cursor: 'pointer', color: '#007bff' }}
+                    className="text-blue-500 hover:underline cursor-pointer"
                   >
-                    Sign&nbsp;In
+                    Sign In
                   </span>
                 </>
               )}
@@ -142,6 +163,7 @@ const AuthModal = () => {
       )}
     </>
   );
+  
 };
 
 export default AuthModal;

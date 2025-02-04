@@ -35,36 +35,54 @@ const SignIn = () => {
   return (
     <>
       {/* Trigger button */}
-      <button onClick={() => setShowModal(true)}>Open Login Modal</button>
-
+      <button
+        onClick={() => setShowModal(true)}
+        className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+      >
+        Open Login Modal
+      </button>
+  
       {/* Modal */}
       {showModal && (
-        <div className="modal-backdrop" onClick={() => setShowModal(false)}>
+        <div
+          className="fixed inset-0 bg-gray-500 bg-opacity-50 flex items-center justify-center"
+          onClick={() => setShowModal(false)}
+        >
           <div
-            className="modal"
+            className="bg-white rounded-lg w-96 p-6 relative"
             onClick={(e) => e.stopPropagation()} // Prevent closing on modal click
           >
-            <button className="modal-close" onClick={() => setShowModal(false)}>
+            <button
+              className="absolute top-2 right-2 text-2xl text-gray-500 hover:text-gray-700"
+              onClick={() => setShowModal(false)}
+            >
               &times;
             </button>
-            <h2>Sign In</h2>
-            <form className='login-form' onSubmit={handleSubmit}>
+            <h2 className="text-xl font-semibold text-center mb-4">Sign In</h2>
+            <form className="space-y-4" onSubmit={handleSubmit}>
               <input
                 type="email"
                 placeholder="Email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
               <input
                 type="password"
                 placeholder="Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
-              <button type="submit">Sign In</button>
+              <button
+                type="submit"
+                className="w-full py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
+              >
+                Sign In
+              </button>
             </form>
             <a
-              className="signup-link"
+              className="block text-center text-blue-500 mt-4 hover:underline"
               onClick={() => {
                 setShowModal(false); // Close modal
                 navigate('/signup'); // Navigate to signup page
@@ -77,6 +95,7 @@ const SignIn = () => {
       )}
     </>
   );
+  
 };
 
 export default SignIn;

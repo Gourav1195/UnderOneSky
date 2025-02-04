@@ -17,9 +17,10 @@ const Footer = () => {
           <h4 className="text-lg font-semibold text-white mb-4">Quick Links</h4>
           <ul className="space-y-2 text-sm">
             <li><a href="/shop" className="hover:text-white">Shop</a></li>
-            <li><a href="/about" className="hover:text-white">About Us</a></li>
+            <li><a href="/ai" className="hover:text-white">AI Chatbot</a></li>
+            {/* <li><a href="/about" className="hover:text-white">About Us</a></li>
             <li><a href="/contact" className="hover:text-white">Contact</a></li>
-            <li><a href="/faq" className="hover:text-white">FAQ</a></li>
+            <li><a href="/faq" className="hover:text-white">FAQ</a></li> */}
           </ul>
         </div>
 
@@ -28,11 +29,11 @@ const Footer = () => {
           <h4 className="text-lg font-semibold text-white mb-4">Contact Us</h4>
           <p className="text-sm">Email: gouravmodi1195@gmail.com</p>
           <p className="text-sm">Phone: +91 870 957 5693 </p>
-          <div className="flex space-x-4 mt-4">
+          {/* <div className="flex space-x-4 mt-4">
             <a href="#" className="text-gray-400 hover:text-white"><i className="fab fa-facebook-f"></i></a>
             <a href="#" className="text-gray-400 hover:text-white"><i className="fab fa-twitter"></i></a>
             <a href="#" className="text-gray-400 hover:text-white"><i className="fab fa-instagram"></i></a>
-          </div>
+          </div> */}
         </div>
       </div>
 
