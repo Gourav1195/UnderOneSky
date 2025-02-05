@@ -27,7 +27,7 @@ export const Navbar = () => {
 
   return (
     <>
-      <nav className={`navbar ${theme} p-4 shadow-md`}>
+    <nav className="{navbar ${theme}} pb-4 shadow-md"> 
         <div className="container mx-auto flex justify-between items-center">
           <Link to="/" className="font-comic-sans text-2xl font-bold">
             UnderOneSky
@@ -72,7 +72,7 @@ export const Navbar = () => {
         </div>
 
         {isOpen && (
-          <ul className={`z-10 navbar ${theme} md:hidden flex flex-col items-center py-4 space-y-4`}>
+          <ul className={`z-10 md:hidden flex flex-col items-center py-2 space-y-2`}>
             <li><Link to="/" className="hover:text-gray-200">Home</Link></li>
             {['Weather', 'Shop', 'Leaderboard', 'AI Chatbot'].map((item, index) => (
               <li key={index}>

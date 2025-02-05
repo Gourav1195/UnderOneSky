@@ -5,7 +5,6 @@ import CurrentCity from './CurrentCity';
 const WeatherApp = () => {
     const [weather, setWeather] = useState(null);
     const [city, setCity] = useState('Delhi');
-    const [error, setError] = useState(null);
     const [loading, setLoading] = useState(false);
 
     const categorizedVisibility = (visibility) => {
@@ -34,26 +33,19 @@ const WeatherApp = () => {
 
     useEffect(() => {
         const fetchWeather = async () => {
-            if (!city) {
-                setError("City name cannot be empty.");
-                return;
-            }
             setLoading(true);
-            setError(null);
             const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
             const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`;
             try {
                 const response = await axios.get(url);
                 setWeather(response.data);
-            } catch (error) {
-                setError("Failed to fetch weather data. Please check the city name.");
-                console.log(error);
-            } finally {
                 setLoading(false);
-            }
+            } catch (error) {
+                console.log(error);
+            } 
         }
         fetchWeather();
-    }, [city]); // Only depend on city
+    }, [city]); 
 
     return (
         <>
@@ -68,7 +60,6 @@ const WeatherApp = () => {
                 />
             </div>
             {loading && <p>Loading...</p>}
-            {error && <p className="text-red-500">{error}</p>}
             {weather && (
                 <div className='flex lg:flex-row flex-col items-center justify-center'>
                     <div className='lg:w-auto'>
