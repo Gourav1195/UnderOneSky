@@ -19,7 +19,7 @@ export default function App() {
           <Route path="/leaderboard" element={<Leaderboard/>} />
           <Route path="/shop" element={<Shop/>} />
           <Route path="/auth" element={<AuthModal/>} />
-          <Route path="/ai" element={<Chat/>} />          
+          <Route path="/aichatbot" element={<Chat/>} />          
         </Routes>
         <Footer />
       </BrowserRouter>

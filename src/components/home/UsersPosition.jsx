@@ -10,12 +10,10 @@ export default function getCurrentPosition() {
             (position) =>{
                 const latitude = position.coords.latitude;
                 const longitude = position.coords.longitude;
-                // console.log('lat: ',latitude,' |  long: ' ,longitude);
                 resolve({latitude, longitude});
             },
             (error)=>{
                 console.error('Error while getting location', error.message);
-                // reject(new Error (`Error while getting location: ${error.message}`))
             }
         );
     });
@@ -23,5 +21,3 @@ export default function getCurrentPosition() {
 };
 
 getCurrentPosition();
-
-
