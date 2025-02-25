@@ -50,7 +50,7 @@ const WeatherApp = () => {
     return (
         <>
             <div className='text-center mt-4'>
-                <h1 className="text-2xl font-bold mb-4">🌤️ Current Weather Status</h1>
+                <h1 className="mb-4 text-2xl font-bold mb-4">🌤️ Current Weather Status</h1>
                 <input
                     className='px-1 border-2 rounded-md text-gray-900 border-blue-600 text-center'
                     type='text'

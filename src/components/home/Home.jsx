@@ -46,7 +46,7 @@ const Home = () => {
                         </p>
 
                         <div className="text-center mt-6">
-                            <a href="/shop" className="bg-gradient-to-r from-gray-600 to-gray-900 text-white font-semibold py-3 px-6 rounded-full shadow hover:shadow-lg transition duration-300">
+                            <a href="/shop" className="" >
                                 🌌 Shop Now & Turn Every Glance Into an Adventure! 🌌
                             </a>
                         </div>

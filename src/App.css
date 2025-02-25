@@ -1,24 +1,23 @@
 
 [data-theme="light"] {
-  /* --bg-color: #ffffff; */
+  --bg-color: #8febf5;
+  --bg-color2: #24e3f9;
   --text-color: #333333;
   --heading-color: #444444;
-  background: linear-gradient(90deg, rgb(159, 188, 249),rgb(145, 177, 245),rgb(150, 181, 249));
-  .bg2{
-    background: linear-gradient(90deg, rgb(221, 220, 248), rgb(184, 198, 251));
-   }
+  --bg-grad: linear-gradient(90deg, rgb(143, 217, 251),rgb(145, 177, 245),rgb(150, 181, 249));
+    background:linear-gradient(90deg, rgb(159, 188, 249),rgb(145, 177, 245),rgb(150, 181, 249));
+  
 }
 
 [data-theme="dark"] {
-  --bg-color: #111827;
+  --bg-color: #12192a;
+  --bg-color2: #0a1120;
   --text-color: #ffffff;
   --heading-color: #dddddd;
  /* --bg2-color: rgb(61, 61, 61); */
- background: linear-gradient(90deg, rgba(34, 39, 57, 0.9), rgba(32, 32, 48, 0.9));
- .bg2{
+  --bg-grad: linear-gradient(90deg, rgba(4, 14, 49, 0.9), rgba(32, 32, 48, 0.9));
   background: linear-gradient(90deg, rgba(34, 39, 57, 0.9), rgba(32, 32, 48, 0.9));
-  
- }
+
 }
 
 @keyframes slide-background {

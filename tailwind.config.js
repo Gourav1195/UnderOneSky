@@ -9,6 +9,13 @@ export default {
         'museo-sans': ['Museo Sans', 'sans-serif'],
         'times-new-roman': ['Times New Roman', 'serif'],
       },
+      colors: {
+        'font-color': 'var(--font-color)',
+        'bg-color': 'var(--bg-color)',
+        'bg-grad': 'var(--bg-grad)',
+
+
+      }
     },
   },
   variants: {},

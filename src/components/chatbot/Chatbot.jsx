@@ -23,7 +23,7 @@ const Chat = () => {
   return (
     <div className={`page${theme} flex flex-col h-[90vh] lg:mx-80`} >
     {/* Header with dynamic theme */}
-    <div className="p-4 bg-gradient-to-r from-[var(--bg-color)] via-opacity-90 to-gray-800 shadow-md">
+    <div className="p-4 bg-gradient-to-r from-[var(--bg-color)] via-opacity-90 to-[var(--bg-color2)]  shadow-md">
       <h2 className="font-comic-sans text-2xl  font-bold text-[var(--heading-color)] text-center">
         AI Chatbot
       </h2>

@@ -34,7 +34,7 @@ export const Navbar = () => {
           </Link>
 
           <ul className="hidden md:flex space-x-6">
-            {['Weather', 'Shop', 'Leaderboard', 'AI Chatbot'].map((item, index) => (
+            {['Shop', 'Leaderboard', 'AI Chatbot'].map((item, index) => (
               <li key={index}>
                 <Link to={`/${item.toLowerCase().replace(' ', '')}`} className="hover:text-gray-200">{item}</Link>
               </li>
@@ -74,7 +74,7 @@ export const Navbar = () => {
         {isOpen && (
           <ul className={`z-10 md:hidden flex flex-col items-center py-2 space-y-2`}>
             <li><Link to="/" className="hover:text-gray-200">Home</Link></li>
-            {['Weather', 'Shop', 'Leaderboard', 'AI Chatbot'].map((item, index) => (
+            {['Shop', 'Leaderboard', 'AI Chatbot'].map((item, index) => (
               <li key={index}>
                 <Link to={`/${item.toLowerCase().replace(' ', '')}`} className="hover:text-gray-200">{item}</Link>
               </li>
