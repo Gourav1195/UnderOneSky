@@ -58,10 +58,10 @@ const Home = () => {
                     </div>
                 </div>
                 <div className="lg:w-1/2 p-4 grid grid-cols-2 gap-4">
-                    <a href="/shop"><img className="w-64 h-64 rounded-lg hover:scale-105 transition-transform duration-300" src="/shop_items/celestron.jpg" alt="telescope" /></a>
-                    <a href="/shop"><img className="w-64 h-64 rounded-lg hover:scale-105 transition-transform duration-300" src="/shop_items/nicon_bi.jpg" alt="telescope" /></a>
-                    <a href="/shop"><img className="w-64 h-64 rounded-lg hover:scale-105 transition-transform duration-300" src="/shop_items/glasses.jpg" alt="telescope" /></a>
-                    <a href="/shop"><img className="w-64 h-64 rounded-lg hover:scale-105 transition-transform duration-300" src="/shop_items/pie_matrix_phoenix_60700.jpg" alt="telescope" /></a>
+                    <a href="/shop"><img className="w-64 h-64 rounded-lg hover:scale-105 transition-transform duration-300 aspect-square" src="/shop_items/celestron.jpg" alt="telescope" /></a>
+                    <a href="/shop"><img className="w-64 h-64 rounded-lg hover:scale-105 transition-transform duration-300 aspect-square" src="/shop_items/nicon_bi.jpg" alt="telescope" /></a>
+                    <a href="/shop"><img className="w-64 h-64 rounded-lg hover:scale-105 transition-transform duration-300 aspect-square" src="/shop_items/glasses.jpg" alt="telescope" /></a>
+                    <a href="/shop"><img className="w-64 h-64 rounded-lg hover:scale-105 transition-transform duration-300 aspect-square" src="/shop_items/pie_matrix_phoenix_60700.jpg" alt="telescope" /></a>
                 </div>
             </div>
         </div>

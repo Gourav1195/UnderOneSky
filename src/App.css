@@ -4,8 +4,8 @@
   --bg-color2: #24e3f9;
   --text-color: #333333;
   --heading-color: #444444;
-  --bg-grad: linear-gradient(90deg, rgb(143, 217, 251),rgb(145, 177, 245),rgb(150, 181, 249));
-    background:linear-gradient(90deg, rgb(159, 188, 249),rgb(145, 177, 245),rgb(150, 181, 249));
+  background: linear-gradient(90deg, rgb(143, 217, 251),rgb(138, 165, 247),rgb(134, 171, 252));
+  --bg-grad:linear-gradient(90deg, rgb(159, 188, 249),rgb(145, 177, 245),rgb(150, 181, 249));
   
 }
 
